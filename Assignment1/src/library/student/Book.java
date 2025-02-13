@@ -62,7 +62,25 @@ public class Book {
 	public void setPrice(double price) {
 		this.price = price;
 	}
+	/**
+	 * Returns string representation of the book title, author, ISBN and price. 
+	 */
+	@Override
+	public String toString() {
+		return title + "by" + Author + "ISBN:" + ISBN + "$" + price ;
+	}
 
+	/**
+	 * Should check book object is actually something and compares ISBN strings and returns equal 
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == null) {
+			return false;
+		}
+		Book book = (Book)obj;
+		return this.ISBN.equals(book.ISBN);
+	}
 	
 	
 }
