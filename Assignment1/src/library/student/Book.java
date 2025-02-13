@@ -7,12 +7,28 @@ public class Book {
 	private String Author;
 	private String ISBN;
 	private double price; 
-
+	
+	/**
+	 * default constructor that initalizes params
+	 * @param title
+	 * @param Author
+	 * @param ISBN
+	 * @param price
+	 */
 	public Book(String title, String Author, String ISBN, double price) {
-	this.title = title;
-	this.Author = Author;
+	this.title = "Unknown";
+	this.Author = "Unknown";
 	this.ISBN = "Unknown";
 	this.price = 0.0;
+	}
+	
+	//Copy Constructor 
+	public Book(Book other) {
+		this.title = other.title;
+		this.Author = other.Author;
+		this.ISBN = other.ISBN;
+		this.price = other.price;
+		
 	}
 	
 	public String getTitle() {
